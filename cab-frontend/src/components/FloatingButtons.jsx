@@ -7,7 +7,7 @@ const FloatingButtons = () => {
     const whatsappLink = `https://wa.me/${phoneNumber}?text=I want to book a taxi`;
 
     return (
-        <>
+        <div>
             {/* WhatsApp - FIXED */}
             <a
                 href={whatsappLink}
@@ -32,7 +32,7 @@ const FloatingButtons = () => {
                 <span>Instagram</span>
             </a>
             
-        </>
+        </div>
     );
 };
 

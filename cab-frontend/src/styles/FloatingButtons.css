@@ -1,14 +1,14 @@
 /* WhatsApp Button (Fixed Bottom Right) */
 .whatsapp-btn {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     right: 20px;
     background-color: #25d366;
     color: white;
     padding: 10px 15px;
     border-radius: 50px;
     display: flex;
-    align-items: center;
+    align-items: right;
     gap: 8px;
     font-size: 14px;
     text-decoration: none;
@@ -25,13 +25,45 @@
 /* Instagram Button (Middle Right - NOT FIXED) */
 .instagram-btn {
     position: fixed;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #e1306c;
+    bottom: 20px;
+    right: 20px;
+    background-color: #E4405F;
     color: white;
-    padding: 12px;
-    border-radius: 50%;
-    font-size: 30px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: right;
+    gap: 8px;
+    font-size: 14px;
     text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.instagram-btn:hover {
+    background-color: #E4405F;
+    transform: scale(1.05);
+}
+.call-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #305CDE;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: right;
+    gap: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.call-btn:hover {
+    background-color: #305CDE;
+    transform: scale(1.05);
 }

@@ -1,5 +1,5 @@
 export const COMPANY_DETAILS = {
-    name:'Swara Trips',
+    name:'Swara Trips Indore',
     address:'Indore (MP), India',
     phone:' +91-9302538296',
     email:'Swaratrips623@gmail.com',

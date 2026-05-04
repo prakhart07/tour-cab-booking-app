@@ -20,6 +20,8 @@ const FloatingButtons = () => {
             </a>
 
             {/* Instagram - NOT FIXED (absolute inside page) */}
+           
+
             <a
                 href="https://www.instagram.com/st_royal_trips/"
                 className="instagram-btn"
@@ -27,7 +29,9 @@ const FloatingButtons = () => {
                 rel="noreferrer"
             >
                 <FaInstagram />
+                <span>Instagram</span>
             </a>
+            
         </>
     );
 };

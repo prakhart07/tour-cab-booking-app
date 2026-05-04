@@ -1,9 +1,10 @@
 import React from "react";
-import { FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaPhone } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa6";
 import "../styles/FloatingButtons.css";
 
 const FloatingButtons = () => {
-    const phoneNumber = "919302538296"; // your number
+    const phoneNumber = "919302538296";
     const whatsappLink = `https://wa.me/${phoneNumber}?text=I want to book a taxi`;
 
     return (
@@ -16,7 +17,7 @@ const FloatingButtons = () => {
                 rel="noreferrer"
             >
                 <FaWhatsapp />
-                <span>Book Taxi</span>
+                <span>WhatsApp</span>
             </a>
 
             {/* Instagram - NOT FIXED (absolute inside page) */}
@@ -24,7 +25,7 @@ const FloatingButtons = () => {
 
             <a
                 href="https://www.instagram.com/st_royal_trips/"
-                className="instagram-btn"
+                className="float-item instagram"
                 target="_blank"
                 rel="noreferrer"
             >

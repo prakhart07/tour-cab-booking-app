@@ -8,17 +8,17 @@ import Admin from "../pages/Admin";
 
 const AppRoutes = () => {
     return (
-        <>
+        
             <Routes>
-                <Route element={<MainLayout />}>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/contact-us" element={<ContactUs />} />
-                    <Route path="/tour-packages" element={<TourPackages />} />
+                <Route element={<MainLayout/>}>
+                    <Route path="/" element={<Home/>} />
+                    <Route path="/contact-us" element={<ContactUs/>} />
+                    <Route path="/tour-packages" element={<TourPackages/>} />
                      <Route path="/about" element={<About />} />
                      <Route path="/admin" element={<Admin />} />
                 </Route>
             </Routes>
-        </>
+        
     )
 }
 

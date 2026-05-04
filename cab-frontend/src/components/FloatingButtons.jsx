@@ -8,16 +8,14 @@ const FloatingButtons = () => {
     const whatsappLink = `https://wa.me/${phoneNumber}?text=I want to book a taxi`;
 
     return (
-        <div className="floating-container">
-
-            {/* CALL */}
-            <a href="tel:+919302538296" className="float-item call">
-                <FaPhone />
-                <span>Call</span>
-            </a>
-
-            {/* WHATSAPP */}
-            <a href={whatsappLink} className="float-item whatsapp" target="_blank" rel="noreferrer">
+        <div>
+            {/* WhatsApp - FIXED */}
+            <a
+                href={whatsappLink}
+                className="whatsapp-btn"
+                target="_blank"
+                rel="noreferrer"
+            >
                 <FaWhatsapp />
                 <span>WhatsApp</span>
             </a>
@@ -35,7 +33,7 @@ const FloatingButtons = () => {
                 <span>Instagram</span>
             </a>
             
-        </>
+        </div>
     );
 };
 

@@ -83,10 +83,10 @@ const Navbar = () => {
               Contact
             </button>
 
-            <span className="flex items-center space-x-2 navbar-phone">
+            <a className="flex items-center space-x-2 navbar-phone" href={`tel:${COMPANY_DETAILS.phone.replace(/\s/g, '')}`}>
               <span>{COMPANY_DETAILS.phone}</span>
               <PhoneCall size={20} />
-            </span>
+            </a>
             {/* <button className="navbar-btn">
               Book a Ride
             </button> */}

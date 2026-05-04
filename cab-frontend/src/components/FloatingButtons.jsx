@@ -6,7 +6,7 @@ import { COMPANY_DETAILS } from "../ComponyDetails";
 
 const FloatingButtons = () => {
     const phoneNumber = "919302538296";
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=I want to book a taxi`;
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=Hi, I want to book a taxi!`;
 
     return (
         <div>

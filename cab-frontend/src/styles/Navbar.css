@@ -24,24 +24,24 @@
 }
 
 .navbar-logo-img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
 }
 
 /* Tablet */
 @media (max-width: 768px) {
   .navbar-logo-img {
-    width: 32px;
-    height: 32px;
+    width: 70px;
+    height: 70px;
   }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
   .navbar-logo-img {
-    width: 26px;
-    height: 26px;
+    width: 50px;
+    height: 50px;
   }
 }
 

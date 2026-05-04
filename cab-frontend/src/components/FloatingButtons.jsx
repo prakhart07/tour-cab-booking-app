@@ -22,7 +22,9 @@ const FloatingButtons = () => {
                 <span>WhatsApp</span>
             </a>
 
-            {/* INSTAGRAM WITH ARROW */}
+            {/* Instagram - NOT FIXED (absolute inside page) */}
+           
+
             <a
                 href="https://www.instagram.com/st_royal_trips/"
                 className="float-item instagram"
@@ -32,8 +34,8 @@ const FloatingButtons = () => {
                 <FaInstagram />
                 <span>Instagram</span>
             </a>
-
-        </div>
+            
+        </>
     );
 };
 

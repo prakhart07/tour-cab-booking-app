@@ -3,12 +3,14 @@ import "../styles/ContactUs.css";
 import { saveContact } from "../API/ContactApi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
- 
+
+
 export default function ContactForm({
   title = "Contact Us",
   openInMapsUrl = "https://www.google.com/maps?q=Indore%20Madhya%20Pradesh",
   mapEmbedUrl = "https://maps.google.com/maps?q=Indore%20Madhya%20Pradesh&z=14&output=embed",
 }) {
+  
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -29,7 +31,39 @@ export default function ContactForm({
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
+    
   };
+  
+  
+  const sendWhatsApp = async () => {
+    const ANON = import.meta.env.VITE_SUPABASE_ANON_KEY;
+  if (!form.name || !form.phone || !form.option) {
+    alert("Please fill required fields");
+    return;
+  }
+
+  try {
+    const res = await fetch(
+      "https://alblgqztiphkysgszghx.supabase.co/functions/v1/send-whatsapp",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${ANON}`,
+        },
+        body: JSON.stringify(form),
+      }
+    );
+
+    const data = await res.json();
+    console.log(data);
+
+    alert("Message Sent ✅");
+  } catch (err) {
+    console.error(err);
+    alert("Error ❌");
+  }
+};
  
   async function handleSubmit(e) {
     e.preventDefault();
@@ -39,6 +73,12 @@ export default function ContactForm({
 
     if (res) {
       toast.success("Your data is saved ✅");
+      const wares= await sendWhatsApp();
+        if (wares) {
+          toast.success("WhatsApp message sent ✅");
+        } else {
+          toast.error("Failed to send WhatsApp message ❌");
+        }
 
       setForm({
         name: "",
